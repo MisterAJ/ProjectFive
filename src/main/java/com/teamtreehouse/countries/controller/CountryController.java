@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 @Controller
 public class CountryController {
 
@@ -16,7 +18,9 @@ public class CountryController {
     private CountryRepository countryRepository;
 
     @RequestMapping("/")
-    public String listCountries() {
+    public String listCountries(ModelMap modelMap) {
+        List<Country> allCountries = countryRepository.getAllCountries();
+        modelMap.put("countries", allCountries);
         return "home";
     }
 

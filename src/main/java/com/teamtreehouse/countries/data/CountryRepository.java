@@ -24,4 +24,8 @@ public class CountryRepository {
         }
         return null;
     }
+
+    public List<Country> getAllCountries() {
+        return ALL_COUNTRIES;
+    }
 }
