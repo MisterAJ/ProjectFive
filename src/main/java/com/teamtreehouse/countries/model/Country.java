@@ -2,12 +2,12 @@ package com.teamtreehouse.countries.model;
 
 public class Country {
     private String name;
-    private int population;
+    private String population;
     private String capitalCity;
     private String officialLanguages;
     private String flag;
 
-    public Country(String name, int population, String capitalCity, String officialLanguages, String flag) {
+    public Country(String name, String population, String capitalCity, String officialLanguages, String flag) {
         this.name = name;
         this.population = population;
         this.capitalCity = capitalCity;
@@ -23,11 +23,11 @@ public class Country {
         this.name = name;
     }
 
-    public int getPopulation() {
+    public String getPopulation() {
         return population;
     }
 
-    public void setPopulation(int population) {
+    public void setPopulation(String population) {
         this.population = population;
     }
 
